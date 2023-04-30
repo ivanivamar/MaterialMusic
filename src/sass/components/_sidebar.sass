@@ -1,0 +1,75 @@
+nav
+    width: 75px
+    height: 100%
+    position: fixed
+    left: 0
+    top: 0
+    background-color: $bg-color
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    padding: 10px 0
+
+    header
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 24px
+
+        img
+            width: 55%
+            height: auto
+
+    .section
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 12px
+        position: relative
+
+        &::before
+            content: ''
+            position: absolute
+            width: 80%
+            height: 2px
+            background-color: $secondary-color
+            top: -12px
+            left: 50%
+            transform: translateX(-50%)
+
+        a
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 4px
+            text-decoration: none
+            font-family: $font-family
+
+            i, span
+                color: $text-color
+                font-size: 12px
+                transition: all 0.2s ease-in-out
+                font-variation-settings: 'GRAD' 0, 'opsz' 17
+
+            i
+                font-size: 22px
+
+            &:hover,
+            &.active
+
+                span,
+                i
+                    color: $primary-color
+
+                span
+                    font-family: $font-family-black
+
+            &.active
+
+                span,
+                i
+                    font-variation-settings: "GRAD" 125
+
